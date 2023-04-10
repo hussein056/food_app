@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "2101220072",
+    "project_id": "oreed-edd3c",
+    "storage_bucket": "oreed-edd3c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:2101220072:android:3eb7e3127f73b8a5e4af5d",
+        "android_client_info": {
+          "package_name": "com.example.oreed"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "2101220072-7rf6fp597en8ceibad0i2hld30g87jli.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.oreed",
+            "certificate_hash": "8f769b4f2944dea6e2186e717d01a1aec437066d"
+          }
+        },
+        {
+          "client_id": "2101220072-vpfc8mn3oun4kq3jphj5t4tdsqv5e170.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANvaVnyVEiva46yZZKfI25m3YQzASukag"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "2101220072-vpfc8mn3oun4kq3jphj5t4tdsqv5e170.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
