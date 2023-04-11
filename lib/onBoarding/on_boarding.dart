@@ -113,15 +113,15 @@ class _OnboardScreenState extends State<OnboardScreen> {
                   bottom: MediaQuery.of(context).size.height * 0.2,
                   left: MediaQuery.of(context).size.width * 0.33,
                   child: ElevatedButton(
-                    onPressed: () {
-                      setState(() async {
-                        await CachHelper.saveData(key: 'onBoarding', value: "Hi");
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => HomePage()),
-                        );
-                      });
+                    onPressed: () async {
+                      // setState(() async {
+
+                      // });
+                      await CachHelper.saveData(key: 'onBoarding', value: "Hi");
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => HomePage()),
+                      );
                     },
                     child: Text(
                       "هيا بنا",

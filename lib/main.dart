@@ -17,16 +17,14 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  SharedPreferences.setMockInitialValues({});
-
+  // SharedPreferences.setMockInitialValues({});
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  await CachHelper.init();
   Widget widget;
-  onBoarding =  await CachHelper.getData(key: 'onBoarding');
+  await CachHelper.init();
+  onBoarding = await CachHelper.getData(key: 'onBoarding');
   if (onBoarding != null) {
     widget = HomePage();
-
   } else {
     widget = OnboardScreen();
   }

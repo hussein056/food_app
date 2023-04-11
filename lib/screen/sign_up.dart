@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:oreed/screen/home_page.dart';
+import 'package:oreed/screen/home_page_screens/payment_page.dart';
 import 'package:oreed/screen/login_page.dart';
 import 'package:oreed/screen/widget/cache_helper.dart';
 import '../onBoarding/constant.dart';
@@ -41,12 +42,11 @@ class _SignUpState extends State<SignUp> {
         "email": email.text.trim(),
         "userid": userCredential.user!.uid,
         "password": password.text.trim(),
-      }).whenComplete(() {
-        setState(() {
-          loading = false;
-          Navigator.of(context).pushReplacement(
-              MaterialPageRoute(builder: (context) => LoginPage()));
-        });
+      }).whenComplete(() async {
+        loading = false;
+        await CachHelper.saveData(key: 'uId', value: "Hello");
+        Navigator.of(context).pushReplacement(
+            MaterialPageRoute(builder: (context) => PaymentPage()));
       });
     } on FirebaseAuthException catch (e) {
       if (e.code == 'weak-password') {
@@ -320,7 +320,7 @@ class _SignUpState extends State<SignUp> {
                               ),
                               onPressed: () {
                                 setState(() {
-                                  Navigator.push(
+                                  Navigator.pushReplacement(
                                       context,
                                       MaterialPageRoute(
                                           builder: (context) => LoginPage()));

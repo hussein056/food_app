@@ -31,14 +31,14 @@ class BottomContainer extends StatelessWidget {
             ListTile(
               leading: Text(
                 name,
-                style: TextStyle(fontSize: 20, color: primarygreen),
+                style: TextStyle(fontSize: 18, color: primarygreen),
               ),
               trailing: Directionality(
                 textDirection: TextDirection.rtl,
                 child: Text(
                   "$price دينار ",
                   style: TextStyle(
-                    fontSize: 20,
+                    fontSize: 18,
                     color: primarygreen,
                   ),
                 ),
